@@ -12,23 +12,21 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\SignupController;
 
 Route::get('/', function () {
-    $array['name1'] = "j";
-    $array['name2'] = "k";
-    $array['name3'] = "l";
-
-    $array2['names'] = $array;
-    return view('welcome', $array2);
+    return view('welcome');
 });
 
 Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/user/{id}/{type}', function ($id, $type) {
-    $arr['id'] = $id;
-    $arr['type'] = $type;
-    return view('user', $arr);
-});
+Route::get('/user',[UserController::class, 'index']);
+Route::get('signup',[SignupController::class, 'index']);
+
+// Route::get('/user', function () {
+//     return view('user');
+// });
 

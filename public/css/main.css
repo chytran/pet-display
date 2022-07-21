@@ -3,3 +3,30 @@ header {
     background-color: #ddd;
     padding: 1rem;
 }
+
+form {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border: solid thin #aaa;
+    margin: auto;
+}
+
+.textbox {
+    width: 95%;
+    padding: 10px;
+    border: solid thin #aaa;
+    border-radius: 5px;
+    margin: 4px;
+}
+
+.btn {
+    width: 120px;
+    background-color: #121212;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    margin: 4px;
+}
