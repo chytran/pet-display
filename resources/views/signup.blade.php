@@ -10,6 +10,7 @@
 </head>
 <body>
     <form method="POST">
+        @csrf
         <input class="textbox" type="text" name="email" placeholder="Email">
         <input class="textbox" type="text" name="password" placeholder="Password">
 

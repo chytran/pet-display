@@ -24,7 +24,9 @@ Route::get('/about', function () {
 });
 
 Route::get('/user',[UserController::class, 'index']);
+
 Route::get('signup',[SignupController::class, 'index']);
+Route::post('signup',[SignupController::class, 'index']);
 
 // Route::get('/user', function () {
 //     return view('user');

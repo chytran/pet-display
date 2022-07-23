@@ -8,7 +8,7 @@ class SignupController extends Controller
 {
     //
     public function index(Request $request){
-       echo "This is the signup page";
+       print_r($request->input("email"));
        return view("signup");
     }
 }
