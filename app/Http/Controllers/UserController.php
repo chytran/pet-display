@@ -3,12 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
     //
-    public function index() {
-        echo "This is from the user controller";
-        return view('user');
+    public function index($id = null) {
+
+        $stuff['id'] = $id;
+        if($id) {
+            $data = DB::select("select * from users where id = :id", $stuff);
+        } else {
+            $data = DB::select("select * from users");
+        }
+        
+        $arr['data'] = $data;
+
+        return view('user', $arr);
+        // echo "This is from the user controller";
+        // return view('user');
     }
 }

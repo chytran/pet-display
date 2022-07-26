@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\SignupController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,8 +14,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\SignupController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,7 +23,7 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/user',[UserController::class, 'index']);
+Route::get('/user/{id}',[UserController::class, 'index']);
 
 Route::get('signup',[SignupController::class, 'index']);
 Route::post('signup',[SignupController::class, 'index']);
@@ -32,3 +32,4 @@ Route::post('signup',[SignupController::class, 'index']);
 //     return view('user');
 // });
 
+Route::get('user', [UserController::class, 'index']);
