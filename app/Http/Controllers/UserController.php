@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\People;
 
 class UserController extends Controller
 {
@@ -12,9 +13,9 @@ class UserController extends Controller
 
         $stuff['id'] = $id;
         if($id) {
-            $data = DB::select("select * from users where id = :id", $stuff);
+            $data = People::where('id', $id)->get();
         } else {
-            $data = DB::select("select * from users");
+            $data = People::all();
         }
         
         $arr['data'] = $data;
