@@ -16,8 +16,8 @@ class checkLogin
      */
     public function handle(Request $request, Closure $next)
     {
-        if(session()->mission("LOGGED_IN")){
-            echo "You are not logged in";
+        if(session()->missing("LOGGED_IN")){
+            return redirect("denied");
         }
         return $next($request);
     }
