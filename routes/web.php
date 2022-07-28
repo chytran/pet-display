@@ -33,3 +33,5 @@ Route::post('signup',[SignupController::class, 'index']);
 // });
 
 Route::get('user', [UserController::class, 'index']);
+
+Route::get("/login");
