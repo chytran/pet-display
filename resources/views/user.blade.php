@@ -8,9 +8,11 @@
     @endforeach
 </table> --}}
 
-<form method="post">
+{{$errors}}
+<form method="post" enctype="multipart/form-data">
     @csrf
     Please select an image to post: <br><br>
     <input type="file" name="file"><br>
     <input type="submit" value="Post">
 </form>
+<img src="{{url($path)}}" alt="">

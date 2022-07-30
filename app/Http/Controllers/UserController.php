@@ -32,8 +32,11 @@ class UserController extends Controller
     public function post(Request $req) {
 
         $validated = $req->validate([
-            "file" => "required"
+            "file" => "required|image"
         ]);
-        return view('user');
+
+        $path = $req->file('file')->store('myuploads');
+        echo $path;
+        return view('user', ["path"=>$path]);
     }
 }
