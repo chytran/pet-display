@@ -17,7 +17,7 @@ use App\Http\Controllers\logoutController;
 */
 
 Route::get("/", function() {
-    session()->put("LOGGED_IN", true);
+    // session()->put("LOGGED_IN", true);
     return view("welcome");
 });
 
@@ -39,6 +39,7 @@ Route::get('logout',[logoutController::class, 'index']);
 // });
 
 Route::get('user', [UserController::class, 'index']);
+Route::post('user', [UserController::class, 'post']);
 
 Route::get("/login", function(){
     return view('login');

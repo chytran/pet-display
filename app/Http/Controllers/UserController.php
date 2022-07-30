@@ -22,10 +22,18 @@ class UserController extends Controller
         // session()->put("username", "John");
         // session()->forget("username");
 
-        print_r(session()->all());
+        // print_r(session()->all());
 
         return view('user');
         // echo "This is from the user controller";
         // return view('user');
+    }
+
+    public function post(Request $req) {
+
+        $validated = $req->validate([
+            "file" => "required"
+        ]);
+        return view('user');
     }
 }

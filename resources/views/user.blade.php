@@ -7,3 +7,10 @@
 
     @endforeach
 </table> --}}
+
+<form method="post">
+    @csrf
+    Please select an image to post: <br><br>
+    <input type="file" name="file"><br>
+    <input type="submit" value="Post">
+</form>
