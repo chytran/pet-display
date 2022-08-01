@@ -22,6 +22,11 @@
             <tr><th>{{$row->id}}</th><td>{{$row->username}}</td><th>{{$row->email}}</th><th>{{$row->date}}</th></tr>
         @endforeach
     </table>    
-    
+    <style type="text/css">
+        .w-5 {
+            width: 100px;
+        }
+    </style>
+    {{$data->links()}}
 </body>
 </html>
