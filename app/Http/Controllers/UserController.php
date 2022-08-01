@@ -24,7 +24,9 @@ class UserController extends Controller
 
         // print_r(session()->all());
 
-        return view('user');
+        // was DB::table('users')->paginate(2);
+        $data = People::paginate(2);
+        return view('user',["data"=>$data]);
         // echo "This is from the user controller";
         // return view('user');
     }
