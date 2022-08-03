@@ -31,6 +31,7 @@ class CustomerController extends Controller
     }
 
     function list(){
-
+        $data = Customer::paginate(2);
+        return view("listcustomer", ["data"=>$data]);
     }
 }

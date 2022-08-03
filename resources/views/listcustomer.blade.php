@@ -18,7 +18,7 @@
 
             <tbody>
                 @foreach($data as $row)
-                    <tr><td></td></tr>
+                    <tr><th>{{$row['name']}}</th><th>{{$row['email']}}</th><th>{{$row['age']}}</th><th>{{$row['date']}}</th></tr>
                 @endforeach
             </tbody>
         </table>
