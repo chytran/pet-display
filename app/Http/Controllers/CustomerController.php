@@ -31,7 +31,16 @@ class CustomerController extends Controller
     }
 
     function list(){
-        $data = Customer::paginate(2);
+        $data = Customer::all();
         return view("listcustomer", ["data"=>$data]);
+    }
+
+    function deletecustomer($id){
+        $cus = new Customer();
+        $data = $cus->find($id);
+
+        $data->delete();
+
+        return redirect("listcustomer");
     }
 }

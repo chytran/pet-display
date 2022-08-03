@@ -56,4 +56,6 @@ Route::group(["middleware" => "mygroup"], function(){
 Route::get('addcustomer', [CustomerController::class, 'add']);
 Route::post('addcustomer', [CustomerController::class, 'addcustomer']);
 
+Route::get("deletecustomer/{id}", [CustomerController::class], 'deletecustomer');
+
 Route::get('listcustomer', [CustomerController::class, 'list']);

@@ -7,18 +7,30 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        td, tr {
+            border: soldi thin #aaa;
+        }
+    </style>
     <h2>Customers:</h2>
     <a href="{{url('addcustomer')}}">
         <button type="button">Add new Customer</button>
 
-        <table>
+        <table style="border: solid thin #aaa;">
             <thead>
                 <tr><th>Name</th><th>Email</th><th>Age</th><th>Date</th></tr>
             </thead>
 
             <tbody>
                 @foreach($data as $row)
-                    <tr><th>{{$row['name']}}</th><th>{{$row['email']}}</th><th>{{$row['age']}}</th><th>{{$row['date']}}</th></tr>
+                    <tr><th>{{$row['name']}}</th><th>{{$row['email']}}</th><th>{{$row['age']}}</th><th>{{$row['date']}}</th>
+                    
+                        <td>
+                            <a href="{{url('deletecustomer/'.$row['id'])}}">Delete</a>
+                        </td>
+                    </tr>
+                
+                    
                 @endforeach
             </tbody>
         </table>
