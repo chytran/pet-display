@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\logoutController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,3 +52,5 @@ Route::group(["middleware" => "mygroup"], function(){
     Route::view("/admin", 'admin');
     Route::view("/profile", 'profile');
 });
+
+Route::get('addcustomer', [CustomerController::class, 'add']);
