@@ -43,4 +43,13 @@ class CustomerController extends Controller
 
         return redirect("listcustomer");
     }
+
+    function editcustomer($id) {
+        $cus = new Customer();
+        $data = $cus->find($id);
+
+        $data->edit();
+        
+        return redirect("listcustomer");
+    }
 }
