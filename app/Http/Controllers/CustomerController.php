@@ -48,8 +48,13 @@ class CustomerController extends Controller
         $cus = new Customer();
         $data = $cus->find($id);
 
-        $data->edit();
-        
-        return redirect("listcustomer");
+        if(!$data) 
+        {
+            $data['name'] = "";
+            $data["email"] = "";
+            $data["age"] = "";
+        }
+        return view("editcustomer",['data'=>$data]);
+        // return view("editcustomer");
     }
 }

@@ -14,12 +14,16 @@
             @endforeach
         </div>
         @csrf
-        <h2>Edit customer</h2>
-        <input type="text" name="name" placeholder="Customer name"><br>
-        <input type="email" name="email" placeholder="Customer email"><br>
-        <input type="number" name="age" placeholder="Customer age" value="13"><br>
-        <br>
-        <input type="submit" value="Save">
+        @if($data)
+            <h2>Edit customer</h2>
+            <input type="text" name="name" placeholder="Customer name" value="{{$data['name']}}"><br>
+            <input type="email" name="email" placeholder="Customer email" value="{{$data['email']}}"><br>
+            <input type="number" name="age" placeholder="Customer age" value="{{$data['age']}}"><br>
+            <br>
+            <input type="submit" value="Save">
+        @else
+            <h3>Sorry, customer could not be found</h3>
+        @endif
     </form>
 </body>
 </html>
