@@ -54,7 +54,7 @@ class CustomerController extends Controller
             $data["email"] = "";
             $data["age"] = "";
         }
+        // Allows users to display the same data to edit
         return view("editcustomer",['data'=>$data]);
-        // return view("editcustomer");
     }
 }
