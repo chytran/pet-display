@@ -24,11 +24,11 @@
             <tbody>
                 @if(isset($data))
                     @foreach($data as $row)
-                        <tr><th>{{$row['name']}}</th><th>{{$row['email']}}</th><th>{{$row['age']}}</th><th>{{$row['date']}}</th>
+                        <tr><th>{{$row->name}}</th><th>{{$row->email}}</th><th>{{$row->age}}</th><th>{{$row->date}}</th>
                         
                             <td>
-                                <a href="{{url('editcustomer/'.$row['id'])}}">Edit</a> | 
-                                <a href="{{url('deletecustomer/'.$row['id'])}}">Delete</a>
+                                <a href="{{url('editcustomer/'.$row->id)}}">Edit</a> | 
+                                <a href="{{url('deletecustomer/'.$row->id)}}">Delete</a>
                             </td>
                         </tr>
                     
