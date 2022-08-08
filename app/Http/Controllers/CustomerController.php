@@ -57,4 +57,25 @@ class CustomerController extends Controller
         // Allows users to display the same data to edit
         return view("editcustomer",['data'=>$data]);
     }
+
+    function updatecustomer(Request $req)
+    {
+
+        $validate = $req->validate([
+            'name' => 'required|string',
+            'email' => 'required|email',
+            'age' => 'required|numeric',
+        ]);
+
+        $cus = new Customer();
+        $data = $cus->find($req->id);
+        if($data) {
+            $data->name = $req->name;
+            $data->email = $req->email;
+            $data->age = $req->age;
+            $data->save();
+        };
+        
+        return redirect("listcustomer");
+    }
 }

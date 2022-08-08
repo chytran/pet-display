@@ -60,3 +60,4 @@ Route::get("deletecustomer/{id}", [CustomerController::class, 'deletecustomer'])
 Route::get("editcustomer/{id}", [CustomerController::class, 'editcustomer']);
 
 Route::get('listcustomer', [CustomerController::class, 'list']);
+Route::post('updatecustomer', [CustomerController::class, 'updatecustomer']);
