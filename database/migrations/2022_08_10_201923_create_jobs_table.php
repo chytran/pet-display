@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('jobs', function (Blueprint $table) {
             $table->bigInteger('id')->autoIncrement();
             $table->bigInteger('userid');
+            $table->string('title');
             $table->string('text');
             $table->text('description')->nullable();
             $table->tinyInteger('hasImage')->default(0);
