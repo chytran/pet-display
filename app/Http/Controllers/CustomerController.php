@@ -40,9 +40,10 @@ class CustomerController extends Controller
 
     function list(){
         // $data = Customer::all();
-        $data = DB::table('customers')->get();
+        // $data = DB::table('customers')->get();
 
-        return view("listcustomer", ["data"=>$data]);
+        // return view("listcustomer", ["data"=>$data]);
+        return Customer::all();
     }
 
     function deletecustomer($id){

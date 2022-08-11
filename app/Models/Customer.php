@@ -10,4 +10,9 @@ class Customer extends Model
     use HasFactory;
 
     public $timestamps = false;
+
+    function getNameAttribute($value)
+    {
+        return "hello there " . $value;
+    }
 }
