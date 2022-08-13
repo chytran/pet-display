@@ -13,6 +13,7 @@ class Customer extends Model
 
     function getNameAttribute($value)
     {
+        // Gets name value and can be manipulated
         return "hello there " . $value;
     }
 }
