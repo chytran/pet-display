@@ -17,24 +17,27 @@ class CustomerController extends Controller
 
         $validate = $req->validate([
             'name' => 'required|string',
-            'email' => 'required|email',
+            'email' => 'required',
             'age' => 'required|numeric',
         ]);
 
         // Saves input to database
-        // $cus = new Customer();
-        // $cus->name = $req->name;
-        // $cus->email = $req->email;
-        // $cus->age = $req->age;
-        // $cus->save();
+        $cus = new Customer();
+        $cus->name = $req->name;
+        $cus->email = $req->email;
+        $cus->age = $req->age;
+        $cus->date = date("Y-m-d h:i:s");
+        $cus->save();
 
 
-        $data = array();
-        $data['name'] = $req->name;
-        $data['email'] = $req->email;
-        $data['age'] = $req->age;
+        // $data = array();
+        // $data['name'] = $req->name;
+        // $data['email'] = $req->email;
+        // $data['age'] = $req->age;
+        // $data['date'] = date("Y-m-d h:i:s");
 
-        DB::table("customers")->insert($data);
+        // DB::table("customers")->insert($data);
+
         return redirect("listcustomer");
     }
 
@@ -43,7 +46,9 @@ class CustomerController extends Controller
         // $data = DB::table('customers')->get();
 
         // return view("listcustomer", ["data"=>$data]);
-        return Customer::all();
+        $data = Customer::all();
+
+        return view("listcustomer", ['data'=>$data]);
     }
 
     function deletecustomer($id){

@@ -16,7 +16,7 @@
         @csrf
         <h2>Add new customer</h2>
         <input type="text" name="name" placeholder="Customer name"><br>
-        <input type="email" name="email" placeholder="Customer email"><br>
+        <input type="text" name="email" placeholder="Customer email"><br>
         <input type="number" name="age" placeholder="Customer age" value="13"><br>
         <br>
         <input type="submit" value="Save">

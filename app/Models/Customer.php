@@ -14,6 +14,16 @@ class Customer extends Model
     function getNameAttribute($value)
     {
         // Gets name value and can be manipulated
+        // Accessor
         return "hello there " . $value;
+    }
+
+    // Mutator
+    function setEmailAttribute($value) 
+    {
+        if(strstr($value, "@gmail.com")){
+            $value = $value . "@gmail.com";
+        }
+        $this->attributes['email'] = $value . "@gmail.com";
     }
 }
