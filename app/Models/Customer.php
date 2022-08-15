@@ -24,6 +24,7 @@ class Customer extends Model
         if(strstr($value, "@gmail.com")){
             $value = $value . "@gmail.com";
         }
+        // Adds @gmail.com if it doesn't already
         $this->attributes['email'] = $value . "@gmail.com";
     }
 }
