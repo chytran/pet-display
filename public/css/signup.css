@@ -1,0 +1,137 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #83889C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 70%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 10px;
+}
+
+.left {
+    height: 100%;
+    width: 40%;
+    background: rgb(84,88,113);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.left-alignment {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.logo {
+    font-size: 2.25rem;
+    color: #FFF;
+    padding-top: 1.4rem;
+}
+
+.right {
+    height: 100%;
+    width: 60%;
+    background: #F7EBEB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2rem;
+    border-radius: 10px;
+}
+
+.right-alignment {
+    left: 0;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+}
+
+.login-info {
+    row-gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 1.50rem;
+    color: black;
+    opacity: 0.8;
+    text-align: left;
+}
+
+.email-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    flex-direction: column;
+    padding: 1rem; 
+    row-gap: 1rem;
+}
+
+.password-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    flex-direction: column;
+    padding: 1rem; 
+    row-gap: 1rem;
+}
+
+.login-input {
+    background: #FFF;
+    padding: 0.5rem;
+    border: 0.1px solid grey;
+    box-shadow: 1px 1px 3px  #121212;
+    border-radius: 2px;
+}
+
+.button-area {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+
+}
+
+.button {
+    padding: 0.75rem 1.5rem;
+    border: 0.5px solid #121212;
+    border-radius: 22px;
+    transition: 0.3s;
+    background: #FFF;
+    cursor: pointer;
+}
+
+.button:hover {
+    opacity: 0.6;
+}

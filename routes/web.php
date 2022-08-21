@@ -29,7 +29,7 @@ Route::get('/about', function () {
 
 Route::get('/user/{id}',[UserController::class, 'index']);
 
-Route::get('signup',[SignupController::class, 'index']);
+Route::get('signup',[SignupController::class, 'get']);
 Route::post('signup',[SignupController::class, 'index']);
 
 Route::get('logout',[logoutController::class, 'index']);
