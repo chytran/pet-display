@@ -8,10 +8,43 @@
         @vite('resources/css/app.css')
 
     </head>
-    <body class="antialiased">
+    <body class="antialiased p-0 m-0 flex justify-center flex-col">
+        <header style="z-index: 50;" class="fixed w-full top-0 left-0 z-5 bg-slate-50">
+            <nav style="z-index:51;" class="relative w-full h-24 flex justify-center align-center">
+                <div class="logo flex justify-center flex-row">
+                    <a class="h-24 top-0 w-1/2 p-9 text-l font-bold" href="{{url('/')}}">Petspeed</a>
+                </div>
+                
+
+                {{-- <div id="nav-menu" class="relative h-12 bg-slate-100 sm:fixed sm:top-0 sm:-right-full sm:w-full sm:h-100vh sm:p-9"> --}}
+                <div id="nav-menu" class=" h-24 top-0 w-1/2 p-9">
+                    <ul id="nav_list" class="font-semibold uppercase flex flex-row justify-center gap-6 ">
+                        <li class="nav__item">
+                            <a href="" class="nav__link hover:text-lime-500 duration-300 ease-out">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="" class="nav__link hover:text-lime-500 duration-300 ease-out">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="" class="nav__link hover:text-lime-500 duration-300 ease-out">Pets</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="" class="nav__link hover:text-lime-500 duration-300 ease-out">Contact</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="" class="nav__link hover:text-lime-500 duration-300 ease-out">Login</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="" class="nav__link hover:text-lime-500 duration-300 ease-out">Signup</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+            
         {{-- <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0"> --}}
-            <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            <img class="absolute left-0 top-0 w-full h-full object-cover opacity-25" src="{{url('img/bg-img.jpg')}}" alt="">
+        <div style="z-index: 0;" class="relative z-0 flex justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+            <img style="object-position: 83%;" class="absolute left-0 top-0 w-full h-full object-cover" src="{{url('img/bg-img.jpg')}}" alt="">
             {{-- @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
@@ -26,7 +59,7 @@
                 </div>
             @endif --}}
 
-            @include('header')
+            {{-- @include('header') --}}
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 {{-- <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                     <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
