@@ -169,27 +169,63 @@
                 
             </div>
         </div>
+
         <div class="bg-stone-100 w-full min-h-screen">
             <div class="service-container w-full h-2/5 flex justify-center">
-                <div style="z-index: 200;" class="service-container-organize gap-8 -mt-20 w-4/5 h-full bg-green flex flex-row justify-between content-center">
-                    <div class="service-each w-2/5 bg-green-50 h-2/5 flex flex-col justify-center">
-                        <div class="circle-image bg-stone-50 w-14 h-14 rounded-full flex justify-center items-center">Hi</div>
-                        <h2 class="text-center">service-title</h2>
-                        <p class="service-description text-center pt-3">Varius, vitae. Vulputate cras elit Sem ornare eu etiam lacus felis facilisi maecenas nulla ultricies primis curabitur arcu parturient aliquet.</p>
-                        <button class="service-button">></button>
+                <div style="z-index: 200;" class="service-container-organize gap-8 -mt-20 w-4/5 h-full bg-green flex flex-row justify-center ">
+                    
+                    <div style="background: #FFFFFF;" class="service-each sm:w-2/5 md:w-1/5 h-2/5 flex flex-col justify-center shadow-md rounded-sm">
+                        <div class="circle-organizer flex justify-center -mt-7">
+                            <div class="circle-image bg-stone-100 w-14 h-14 rounded-full flex justify-center items-center text-green-400">Hi</div>
+                        </div>
+                        <h2 class="text-center pt-3 font-bold">Pet Daycare</h2>
+                        <p class="service-description text-sm text-center pt-3 pl-10 pr-10">Varius, vitae. Vulputate cras elit Sem ornare eu etiam lacus felis facilisi maecenas nulla ultricies primis curabitur arcu parturient aliquet.</p>
+                        
+                        <div class="circle-organizer flex justify-center mt-3">
+                            <div class="circle-image bg-green-500 -mb-6 sm:w-12 md:w-12 h-12 rounded-full flex justify-center items-center text-green-400">
+                                <button class="service-button text-white">
+                                    >
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="service-each w-2/5 bg-green-50 h-2/5 flex flex-col justify-center">
-                        <div class="circle-image bg-stone-50 w-14 h-14 rounded-full flex justify-center items-center">Hi</div>
-                        <h2 class="text-center">service-title</h2>
-                        <p class="service-description text-center pt-3">Varius, vitae. Vulputate cras elit Sem ornare eu etiam lacus felis facilisi maecenas nulla ultricies primis curabitur arcu parturient aliquet.</p>
-                        <button class="service-button">></button>
+
+                    <div style="background: #FFFFFF;" class="service-each sm:w-2/5 md:w-1/5 h-2/5 flex flex-col justify-center shadow-md rounded-sm">
+                        <div class="circle-organizer flex justify-center -mt-7">
+                            <div class="circle-image bg-stone-100 w-14 h-14 rounded-full flex justify-center items-center text-green-400">Hi</div>
+                        </div>
+                        <h2 class="text-center pt-3 font-bold">Pet Daycare</h2>
+                        <p class="service-description text-sm text-center pt-3 pl-10 pr-10">Varius, vitae. Vulputate cras elit Sem ornare eu etiam lacus felis facilisi maecenas nulla ultricies primis curabitur arcu parturient aliquet.</p>
+                        
+                        <div class="circle-organizer flex justify-center mt-3">
+                            <div class="circle-image bg-green-500 -mb-6 sm:w-12 md:w-12 h-12 rounded-full flex justify-center items-center text-green-400">
+                                <button class="service-button text-white">
+                                    >
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="service-each w-2/5 bg-green-50 h-2/5 flex flex-col justify-center">
-                        <div class="circle-image bg-stone-50 w-14 h-14 rounded-full flex justify-center items-center">Hi</div>
-                        <h2 class="text-center">service-title</h2>
-                        <p class="service-description text-center pt-3">Varius, vitae. Vulputate cras elit Sem ornare eu etiam lacus felis facilisi maecenas nulla ultricies primis curabitur arcu parturient aliquet.</p>
-                        <button class="service-button">></button>
+
+                    <div style="background: #FFFFFF;" class="service-each sm:w-2/5 md:w-1/5 h-2/5 flex flex-col justify-center shadow-md rounded-sm">
+                        <div class="circle-organizer flex justify-center -mt-7">
+                            <div class="circle-image bg-stone-100 w-14 h-14 rounded-full flex justify-center items-center text-green-400">Hi</div>
+                        </div>
+                        <h2 class="text-center pt-3 font-bold">Pet Daycare</h2>
+                        <p class="service-description text-sm text-center pt-3 pl-10 pr-10">Varius, vitae. Vulputate cras elit Sem ornare eu etiam lacus felis facilisi maecenas nulla ultricies primis curabitur arcu parturient aliquet.</p>
+                        
+                        <div class="circle-organizer flex justify-center mt-3">
+                            <div class="circle-image bg-green-500 -mb-6 sm:w-12 md:w-12 h-12 rounded-full flex justify-center items-center text-green-400">
+                                <button class="service-button text-white">
+                                    >
+                                </button>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+                    
+                </div>
                 </div>
             </div>
         </div>
