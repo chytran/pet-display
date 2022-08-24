@@ -7,9 +7,24 @@
         <title>Laravel</title>
         @vite('resources/css/app.css')
 
+        <style>
+            .nav__item::after {
+                position: absolute;
+                content: "";
+                background: rgb(132, 204, 22 );
+                height: 3px;
+                width: 0;
+                bottom: 0;
+                left: 0;
+                transition: width: 3s ease-in-out;
+            }
+            .nav__item:hover::after {
+                width: 100%;
+            }
+        </style>
     </head>
     <body class="antialiased p-0 m-0 flex justify-center flex-col">
-        <header style="z-index: 50;" class="fixed w-full top-0 left-0 z-5 bg-slate-50">
+        <header style="z-index: 50;" class="fixed w-full top-0 left-0 z-5 bg-stone-50">
             <nav style="z-index:51;" class="relative w-full h-24 flex justify-center align-center">
                 <div class="logo flex justify-center flex-row">
                     <a class="h-24 top-0 w-1/2 p-9 text-l font-bold" href="{{url('/')}}">Petspeed</a>
@@ -44,6 +59,7 @@
             
         {{-- <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0"> --}}
         <div style="z-index: 0;" class="relative z-0 flex justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+            <h1 style="z-index:100;" class="text-center absolute left-1/3 top-1/2 font-extrabold  text-white text-5xl mb-5">Highest Quality Care for Pets <br> You'll Love</h1>
             <img style="object-position: 83%;" class="absolute left-0 top-0 w-full h-full object-cover" src="{{url('img/bg-img.jpg')}}" alt="">
             {{-- @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -149,6 +165,31 @@
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </div> --}}
+                </div>
+                
+            </div>
+        </div>
+        <div class="bg-stone-100 w-full min-h-screen">
+            <div class="service-container w-full h-2/5 flex justify-center">
+                <div style="z-index: 200;" class="service-container-organize gap-8 -mt-20 w-4/5 h-full bg-green flex flex-row justify-between content-center">
+                    <div class="service-each w-2/5 bg-green-50 h-2/5 flex flex-col justify-center">
+                        <div class="circle-image bg-stone-50 w-14 h-14 rounded-full flex justify-center items-center">Hi</div>
+                        <h2 class="text-center">service-title</h2>
+                        <p class="service-description text-center pt-3">Varius, vitae. Vulputate cras elit Sem ornare eu etiam lacus felis facilisi maecenas nulla ultricies primis curabitur arcu parturient aliquet.</p>
+                        <button class="service-button">></button>
+                    </div>
+                    <div class="service-each w-2/5 bg-green-50 h-2/5 flex flex-col justify-center">
+                        <div class="circle-image bg-stone-50 w-14 h-14 rounded-full flex justify-center items-center">Hi</div>
+                        <h2 class="text-center">service-title</h2>
+                        <p class="service-description text-center pt-3">Varius, vitae. Vulputate cras elit Sem ornare eu etiam lacus felis facilisi maecenas nulla ultricies primis curabitur arcu parturient aliquet.</p>
+                        <button class="service-button">></button>
+                    </div>
+                    <div class="service-each w-2/5 bg-green-50 h-2/5 flex flex-col justify-center">
+                        <div class="circle-image bg-stone-50 w-14 h-14 rounded-full flex justify-center items-center">Hi</div>
+                        <h2 class="text-center">service-title</h2>
+                        <p class="service-description text-center pt-3">Varius, vitae. Vulputate cras elit Sem ornare eu etiam lacus felis facilisi maecenas nulla ultricies primis curabitur arcu parturient aliquet.</p>
+                        <button class="service-button">></button>
+                    </div>
                 </div>
             </div>
         </div>
