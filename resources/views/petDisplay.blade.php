@@ -24,7 +24,7 @@
         </style>
     </head>
     <body class="antialiased p-0 m-0 flex justify-center flex-col">
-        <header style="z-index: 1000;" class="fixed w-full top-0 left-0 z-5 bg-stone-50">
+        <header style="z-index: 50;" class="fixed w-full top-0 left-0 z-5 bg-stone-50">
             <nav style="z-index:51;" class="relative w-full h-24 flex justify-center align-center">
                 <div class="logo flex justify-center flex-row">
                     <a class="h-24 top-0 w-1/2 p-9 text-l font-bold" href="{{url('/')}}">Petspeed</a>
@@ -35,22 +35,22 @@
                 <div id="nav-menu" class=" h-24 top-0 w-1/2 p-9">
                     <ul id="nav_list" class="font-semibold uppercase flex flex-row justify-center gap-6 ">
                         <li class="nav__item">
-                            <a href="{{url('/')}}" class="nav__link hover:text-lime-500 duration-300 ease-out">Home</a>
+                            <a href="" class="nav__link hover:text-lime-500 duration-300 ease-out">Home</a>
                         </li>
                         <li class="nav__item">
-                            <a href="{{url('/about')}}" class="nav__link hover:text-lime-500 duration-300 ease-out">About</a>
+                            <a href="" class="nav__link hover:text-lime-500 duration-300 ease-out">About</a>
                         </li>
                         <li class="nav__item">
-                            <a href="{{url('/petDisplay')}}" class="nav__link hover:text-lime-500 duration-300 ease-out">Pets</a>
+                            <a href="" class="nav__link hover:text-lime-500 duration-300 ease-out">Pets</a>
                         </li>
                         <li class="nav__item">
-                            <a href="{{url('/')}}" class="nav__link hover:text-lime-500 duration-300 ease-out">Contact</a>
+                            <a href="" class="nav__link hover:text-lime-500 duration-300 ease-out">Contact</a>
                         </li>
                         <li class="nav__item">
-                            <a href="{{url('/')}}" class="nav__link hover:text-lime-500 duration-300 ease-out">Login</a>
+                            <a href="" class="nav__link hover:text-lime-500 duration-300 ease-out">Login</a>
                         </li>
                         <li class="nav__item">
-                            <a href="{{url('/')}}" class="nav__link hover:text-lime-500 duration-300 ease-out">Signup</a>
+                            <a href="" class="nav__link hover:text-lime-500 duration-300 ease-out">Signup</a>
                         </li>
                     </ul>
                 </div>
@@ -59,8 +59,8 @@
             
         {{-- <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0"> --}}
         <div style="z-index: 0;" class="relative z-0 flex justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            <h1 style="z-index:100;" class="text-center absolute left-1/5 top-1/2 sm:text-3xl font-extrabold  text-white text-5xl mb-5">Petspeed Goal Is To Provide High Quality Service <br> To All Animal Lovers</h1>
-            <img style="object-position: 83%;" class="absolute left-0 top-0 w-full h-full object-cover" src="{{url('img/about-bg.webp')}}" alt="">
+            <h1 style="z-index:100;" class="text-center absolute left-1/3 top-1/2 font-extrabold  text-white text-5xl mb-5">Highest Quality Care for Pets <br> You'll Love</h1>
+            <img style="object-position: 83%;" class="absolute left-0 top-0 w-full h-full object-cover" src="{{url('img/bg-img.jpg')}}" alt="">
             {{-- @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
@@ -206,7 +206,7 @@
                         </div>
                     </div>
 
-                    <div style="background: #FFFFFF;" class="service-each sm:w-2/5 md:w-1/5 h-2/5 flex flex-col justify-center shadow-md rounded-sm">
+                    <div style="background: #FFFFFF;" class="relative service-each sm:w-2/5 md:w-1/5 h-2/5 flex flex-col justify-center shadow-md rounded-sm">
                         <div class="circle-organizer flex justify-center -mt-7">
                             <div class="circle-image bg-stone-100 w-14 h-14 rounded-full flex justify-center items-center text-green-400">Hi</div>
                         </div>
@@ -225,8 +225,6 @@
             </div>
         </div>
                     
-                </div>
-                </div>
             </div>
         </div>
     </body>

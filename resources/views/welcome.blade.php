@@ -35,22 +35,22 @@
                 <div id="nav-menu" class=" h-24 top-0 w-1/2 p-9">
                     <ul id="nav_list" class="font-semibold uppercase flex flex-row justify-center gap-6 ">
                         <li class="nav__item">
-                            <a href="" class="nav__link hover:text-lime-500 duration-300 ease-out">Home</a>
+                            <a href="{{url('/')}}" class="nav__link hover:text-lime-500 duration-300 ease-out">Home</a>
                         </li>
                         <li class="nav__item">
-                            <a href="" class="nav__link hover:text-lime-500 duration-300 ease-out">About</a>
+                            <a href="{{url('/about')}}" class="nav__link hover:text-lime-500 duration-300 ease-out">About</a>
                         </li>
                         <li class="nav__item">
-                            <a href="" class="nav__link hover:text-lime-500 duration-300 ease-out">Pets</a>
+                            <a href="{{url('/petDisplay')}}" class="nav__link hover:text-lime-500 duration-300 ease-out">Pets</a>
                         </li>
                         <li class="nav__item">
-                            <a href="" class="nav__link hover:text-lime-500 duration-300 ease-out">Contact</a>
+                            <a href="{{url('/')}}" class="nav__link hover:text-lime-500 duration-300 ease-out">Contact</a>
                         </li>
                         <li class="nav__item">
-                            <a href="" class="nav__link hover:text-lime-500 duration-300 ease-out">Login</a>
+                            <a href="{{url('/')}}" class="nav__link hover:text-lime-500 duration-300 ease-out">Login</a>
                         </li>
                         <li class="nav__item">
-                            <a href="" class="nav__link hover:text-lime-500 duration-300 ease-out">Signup</a>
+                            <a href="{{url('/')}}" class="nav__link hover:text-lime-500 duration-300 ease-out">Signup</a>
                         </li>
                     </ul>
                 </div>
