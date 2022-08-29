@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\logoutController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\PetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,6 +59,8 @@ Route::post('addcustomer', [CustomerController::class, 'addcustomer']);
 
 Route::get("deletecustomer/{id}", [CustomerController::class, 'deletecustomer']);
 Route::get("editcustomer/{id}", [CustomerController::class, 'editcustomer']);
+
+Route::get('petDisplay', [PetController::class, 'list']);
 
 Route::get('listcustomer', [CustomerController::class, 'list']);
 Route::post('updatecustomer', [CustomerController::class, 'updatecustomer']);
