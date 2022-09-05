@@ -32,7 +32,7 @@
                 
 
                 {{-- <div id="nav-menu" class="relative h-12 bg-slate-100 sm:fixed sm:top-0 sm:-right-full sm:w-full sm:h-100vh sm:p-9"> --}}
-                <div id="nav-menu" class=" h-24 top-0 w-1/2 p-9">
+                <div id="nav-menu" class=" h-24 top-0 w-1/2 p-9 pl-52">
                     <ul id="nav_list" class="font-semibold uppercase flex flex-row justify-center gap-6 ">
                         <li class="nav__item">
                             <a href="{{url('/')}}" class="nav__link hover:text-lime-500 duration-300 ease-out">Home</a>
