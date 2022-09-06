@@ -58,9 +58,36 @@
         </header>
             
         {{-- <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0"> --}}
-        <div style="z-index: 0;" class="relative z-0 flex justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+        <div style="z-index: 0;" class="relative z-0 flex content-center justify-center flex-col h-screen w-full min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+        {{-- <div> --}}
             {{-- <h1 style="z-index:100;" class="text-center absolute left-1/3 top-1/2 font-extrabold  text-white text-5xl mb-5">Highest Quality Care for Pets <br> You'll Love</h1> --}}
-            <table style="border: solid thin #aaa;">
+            <div class="w-full h-full flex justify-center content-center flex-col p-24">
+                <div class="w-full h-full grid grid-cols-5 gap-4 justify-center content-center p-24">
+                    @if(isset($data))
+                        @foreach($data as $row)
+                        <div style="border: 0.5px solid grey;" class="bg-slate-50 rounded-lg ">
+                            <div class="name-container p-4">
+                                <h1>{{$row->name}}</h1>
+                            </div>
+                            <div class="img-container">
+                                <img src="{{url('/img/toy-poodle.jpg')}}" alt="">
+                            </div>
+                            <div class="pet-description p-4">
+                                <div class="breed-container">
+                                    <h2 class="pb-3 font-bold">{{$row->breed}}</h2>
+                                    <p class="">This is a Toy Poodle and the goal is to get things done</p>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    @endif
+                    
+                </div>
+                {{$data->links('paginate',['data'=>$data])}}
+            </div>
+            
+
+            {{-- <table style="border: solid thin #aaa;">
                 <thead>
                     <tr><th>Name</th><th>Breed</th><th>Date</th></tr>
                 </thead>
@@ -80,7 +107,7 @@
                         @endforeach
                     @endif
                 </tbody>
-            </table>
+            </table> --}}
             {{-- <img style="object-position: 83%;" class="absolute left-0 top-0 w-full h-full object-cover" src="{{url('img/petDisplay-bg.jpg')}}" alt=""> --}}
             {{-- @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -132,7 +159,7 @@
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </div> --}}
-                </div>
+                {{-- </div> --}}
                 
             </div>
         </div>
