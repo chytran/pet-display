@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\logoutController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\PetController;
 
@@ -43,9 +44,8 @@ Route::get('logout',[logoutController::class, 'index']);
 Route::get('user', [UserController::class, 'index']);
 Route::post('user', [UserController::class, 'post']);
 
-Route::get("/login", function(){
-    return view('login');
-});
+Route::get("login", [LoginController::class, 'index'])->name('login');
+Route::post("login", [LoginController::class, 'login']);
 
 Route::view("/denied", 'denied');
 

@@ -24,6 +24,10 @@
                         @csrf
                         <div class="title">Login to Petscreet!</div>
                         <div class="login-info">
+                            <div class="name-container email-container">
+                                <label for="name" class="label">Name</label>
+                                <input class="login-input" type="text" name="name" placeholder="Name">
+                            </div>
                             <div class="email-container">
                                 <label for="email" class="label">Email</label>
                                 <input class="login-input" type="text" name="email" placeholder="Email">
@@ -37,11 +41,12 @@
                                 <input class="login-input" type="password" name="passwordConfirm" placeholder="Confirm Password">
                             </div>
                         </div>
+                        <div class="button-area">
+                            <a class="button" href="{{url('login')}}">Login</a>
+                            <input class="button" type="submit" value="Signup">
+                        </div>
                     </form>
-                    <div class="button-area">
-                        <button class="button">Login</button>
-                        <input class="button" type="submit" value="Signup" placeholder="Register">
-                    </div>
+                    
                 </div>
                 
             </div>

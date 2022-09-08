@@ -12,7 +12,7 @@ class PetController extends Controller
     function list() 
     {
 
-        $data = DB::table('pet')->paginate(3);
+        $data = DB::table('pet')->paginate(5);
         
         return view("petDisplay", ['data'=>$data]);
     }

@@ -60,6 +60,7 @@
         {{-- <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0"> --}}
         <div style="z-index: 0;" class="relative z-0 flex content-center justify-center flex-col h-screen w-full min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
         {{-- <div> --}}
+            <h1 style="z-index:100;" class="relative mt-52 text-3xl font-bold">Pets For Display</h1>
             {{-- <h1 style="z-index:100;" class="text-center absolute left-1/3 top-1/2 font-extrabold  text-white text-5xl mb-5">Highest Quality Care for Pets <br> You'll Love</h1> --}}
             <div class="w-full h-full flex justify-center content-center flex-col p-24">
                 <div class="w-full h-full grid grid-cols-5 gap-4 justify-center content-center p-24">
@@ -164,7 +165,7 @@
             </div>
         </div>
 
-        <div class="bg-stone-100 w-full min-h-screen">
+        {{-- <div class="bg-stone-100 w-full min-h-screen">
             <div class="service-container w-full h-2/5 flex justify-center">
                 <div style="z-index: 200;" class="service-container-organize gap-8 -mt-20 w-4/5 h-full bg-green flex flex-row justify-center ">
                     
@@ -217,7 +218,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
                     
                 </div>
                 </div>
