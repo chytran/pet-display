@@ -64,3 +64,6 @@ Route::get('petDisplay', [PetController::class, 'list']);
 
 Route::get('listcustomer', [CustomerController::class, 'list']);
 Route::post('updatecustomer', [CustomerController::class, 'updatecustomer']);
+
+Route::get('addpet', [PetController::class, 'displayAddPet']);
+Route::post('addpet', [PetController::class, 'AddPet']);

@@ -16,4 +16,20 @@ class PetController extends Controller
         
         return view("petDisplay", ['data'=>$data]);
     }
+
+    public function displayAddPet() 
+    {
+        $validated = $req->validate([
+            "file" => "required|image"
+        ]);
+
+        $path = $req->file('file')->store('myuploads');
+        echo $path;
+        return view("addPet");
+    }
+
+    function addPet()
+    {
+        return view("addPet");
+    }
 }
