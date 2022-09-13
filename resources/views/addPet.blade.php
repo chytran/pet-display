@@ -17,7 +17,7 @@
         <h2>Add new customer</h2>
         <input type="text" name="name" placeholder="Name"><br>
         <input type="text" name="breed" placeholder="Breed"><br>
-        <input type="number" name="age" placeholder="Customer age" value="13"><br>
+        {{-- <input type="file" name="file" placeholder="image"> --}}
         <br>
         <input type="submit" value="Save">
     </form>

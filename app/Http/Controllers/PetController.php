@@ -19,17 +19,34 @@ class PetController extends Controller
 
     public function displayAddPet() 
     {
-        $validated = $req->validate([
-            "file" => "required|image"
-        ]);
-
-        $path = $req->file('file')->store('myuploads');
-        echo $path;
+    
         return view("addPet");
     }
 
-    function addPet()
+    function addPet(Request $req)
     {
-        return view("addPet");
+
+        $validated = $req->validate([
+            'name'=>'required',
+            'breed'=>'required'
+            // "file" => "required|mimes:jpg,png,bmp"
+        ]);
+
+        $pet = new Pet();
+        // $pet->insert([
+        //     'name'=>$req->input('name'),
+        //     'breed'=>$req->input('breed'),
+        //     // 'date'=>$req->input('date')
+        // ]);
+        $pet->name = $req->name;
+        $pet->breed = $req->breed;
+        $pet->date = date("Y-m-d h:i:s");
+        $pet->save();
+
+        // $validate = $req->validate($array);
+
+        // $path = $req->file('file')->store('myuploads');
+        // echo $path;
+        return redirect("petDisplay");
     }
 }
