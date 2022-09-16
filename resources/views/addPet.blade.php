@@ -7,17 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="post">
-        <div style="color: red">
+    {{$errors}}
+    <form method="post" enctype="multipart/form-data" name="imgUpload">
+        {{-- <div style="color: red">
             @foreach($errors->all() as $error)
                 {{$error}}<br>
             @endforeach
-        </div>
+        </div> --}}
         @csrf
         <h2>Add new customer</h2>
         <input type="text" name="name" placeholder="Name"><br>
         <input type="text" name="breed" placeholder="Breed"><br>
-        {{-- <input type="file" name="file" placeholder="image"> --}}
+        <input type="file" name="image" placeholder="image">
         <br>
         <input type="submit" value="Save">
     </form>

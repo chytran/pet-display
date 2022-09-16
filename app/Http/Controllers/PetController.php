@@ -28,25 +28,46 @@ class PetController extends Controller
 
         $validated = $req->validate([
             'name'=>'required',
-            'breed'=>'required'
+            'breed'=>'required',
             // "file" => "required|mimes:jpg,png,bmp"
         ]);
 
-        $pet = new Pet();
+        
+
+        
+
+        if(!$validated) {
+            return redirect()->back()->with(['message' => 'No file received']);
+        } else {
+            // $destination_path = 'public/img/';
+            // $image = $request->file("image");
+            // $image_name = $image->getClientOriginalName();
+            // $path = $req->file('image')->storeAs($destination_path,$image_name);
+
+            // $input['image'] = $image_name;
+
+            $pet = new Pet();
         // $pet->insert([
         //     'name'=>$req->input('name'),
         //     'breed'=>$req->input('breed'),
         //     // 'date'=>$req->input('date')
         // ]);
-        $pet->name = $req->name;
-        $pet->breed = $req->breed;
-        $pet->date = date("Y-m-d h:i:s");
-        $pet->save();
+            $path = $req->file('image')->store('myuploads');
+            echo $path;
+            $pet->name = $req->name;
+            $pet->breed = $req->breed;
+            $pet->date = date("Y-m-d h:i:s");
+            $pet->image = $path;
+            $pet->save();
+            
+            return view("addPet");
+        }
+        
 
         // $validate = $req->validate($array);
 
         // $path = $req->file('file')->store('myuploads');
         // echo $path;
-        return redirect("petDisplay");
+        
     }
 }

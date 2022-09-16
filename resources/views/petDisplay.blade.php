@@ -71,7 +71,7 @@
                                 <h1>{{$row->name}}</h1>
                             </div>
                             <div class="img-container">
-                                <img src="{{url('/img/toy-poodle.jpg')}}" alt="">
+                                <img src="{{url('/img/' . $row->image . ')' )}}" alt="">
                             </div>
                             <div class="pet-description p-4">
                                 <div class="breed-container">
