@@ -60,7 +60,7 @@ class PetController extends Controller
             $pet->image = $path;
             $pet->save();
             
-            return view("addPet");
+            return redirect("petDisplay");
         }
         
 
