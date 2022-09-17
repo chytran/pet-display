@@ -52,7 +52,7 @@ class PetController extends Controller
         //     'breed'=>$req->input('breed'),
         //     // 'date'=>$req->input('date')
         // ]);
-            $path = $req->file('image')->store('myuploads');
+            $path = $req->file('image')->store('public');
             echo $path;
             $pet->name = $req->name;
             $pet->breed = $req->breed;

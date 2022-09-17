@@ -71,8 +71,9 @@
                                 <h1>{{$row->name}}</h1>
                             </div>
                             <div class="img-container">
-                                <img src="{{url('/img/' . $row->image . ')' )}}" alt="">
+                                <img src="{{url('public/jKpsR8mEpcAGE9K9TVHUz1FsgElIWBS88hJ5Q2bx.jpg')}}" alt="No image">
                             </div>
+                            {{-- ' . $row->image --}}
                             <div class="pet-description p-4">
                                 <div class="breed-container">
                                     <h2 class="pb-3 font-bold">{{$row->breed}}</h2>
