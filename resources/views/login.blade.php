@@ -16,6 +16,7 @@
 <body>
     <div class="container">
         <form method="POST" class="container">
+            @csrf
             <div class="login-container">
                 <div class="left">
                     <div class="left-alignment">
@@ -27,12 +28,18 @@
                         <div class="title">Login to Petscreet!</div>
                         <div class="login-info">
                             <div class="email-container">
+                                @error('email')
+                                <span>{{$message}}</span>
+                                @enderror
                                 <label for="email" class="label">Email</label>
-                                <input class="login-input" type="email" placeholder="Email">
+                                <input class="login-input" type="email" name="email" placeholder="Email">
                             </div>
                             <div class="password-container">
+                                @error('password')
+                                <span>{{$message}}</span>
+                                @enderror
                                 <label for="password" class="label">Password</label>
-                                <input class="login-input" type="password" placeholder="Password">
+                                <input class="login-input" type="password" name="password" placeholder="Password">
                             </div>
                         </div>
                         <div class="button-area">

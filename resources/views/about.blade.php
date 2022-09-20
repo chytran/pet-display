@@ -43,9 +43,9 @@
                         <li class="nav__item">
                             <a href="{{url('/petDisplay')}}" class="nav__link hover:text-lime-500 duration-300 ease-out">Pets</a>
                         </li>
-                        <li class="nav__item">
+                        {{-- <li class="nav__item">
                             <a href="{{url('/')}}" class="nav__link hover:text-lime-500 duration-300 ease-out">Contact</a>
-                        </li>
+                        </li> --}}
                         <li class="nav__item">
                             <a href="{{url('/')}}" class="nav__link hover:text-lime-500 duration-300 ease-out">Login</a>
                         </li>

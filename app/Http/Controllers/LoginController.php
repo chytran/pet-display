@@ -14,16 +14,19 @@ class LoginController extends Controller
 
     function login(Request $req) 
     {
-        $valid = $req->validate([
-            'email'=>'required',
-            'password'=>'required'
-        ]);
+        print_r('this is wrong');
+        // $valid = $req->validate([
+        //     'email'=>'required',
+        //     'password'=>'required'
+        // ]);
 
-        if (Auth::attempt($valid)) {
+        // if (Auth::attempt($valid)) {
             $req->session()->regenerate();
  
-            return redirect()->intended('welcome');
-        }
+            return redirect()->intended('petDisplay');
+        // }
+
+        // return redirect('petDisplay');
  
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',

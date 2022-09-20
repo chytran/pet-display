@@ -24,6 +24,7 @@
         </style>
     </head>
     <body class="antialiased p-0 m-0 flex justify-center flex-col">
+        @csrf
         <header style="z-index: 50;" class="fixed w-full top-0 left-0 z-5 bg-stone-50">
             <nav style="z-index:51;" class="relative w-full h-24 flex justify-center align-center">
                 <div class="logo flex justify-center flex-row">
@@ -43,9 +44,9 @@
                         <li class="nav__item">
                             <a href="{{url('/petDisplay')}}" class="nav__link hover:text-lime-500 duration-300 ease-out">Pets</a>
                         </li>
-                        <li class="nav__item">
+                        {{-- <li class="nav__item">
                             <a href="{{url('/')}}" class="nav__link hover:text-lime-500 duration-300 ease-out">Contact</a>
-                        </li>
+                        </li> --}}
                         <li class="nav__item">
                             <a href="{{url('/')}}" class="nav__link hover:text-lime-500 duration-300 ease-out">Login</a>
                         </li>
